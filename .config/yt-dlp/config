@@ -1,0 +1,3 @@
+--restrict-filenames
+-t mp4
+-o ~/Desktop/"%(upload_date)s-%(title)s.%(ext)s"

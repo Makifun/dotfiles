@@ -1,0 +1,15 @@
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	email = makifun@pm.me
+	name = Makifun
+	signingkey = /home/makifun/.ssh/id_ed25519_only_git.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[credential]
+	helper = store
