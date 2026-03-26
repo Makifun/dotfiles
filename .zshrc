@@ -1,6 +1,3 @@
-# dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 # direnv
 export DIRENV_WARN_TIMEOUT=1m
 
@@ -49,6 +46,7 @@ eza
 fzf
 fzf-tab
 kate
+kubectl
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-interactive-cd
@@ -73,11 +71,6 @@ alias poweroff='$HOME/git/makizen/poweroffpush.sh && sudo systemctl poweroff'
 alias dmesg='sudo dmesg -HL'
 alias pbpaste="copyq clipboard"
 alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
-
-# k8s
-source <(kubectl completion zsh)
-alias k=kubectl
-complete -o default -F __start_kubectl k
 
 # Wrapper for Antigravity to handle cleanup and core dumps
 antigravity() {
