@@ -22,15 +22,12 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # zstyling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'git-status' yes
 zstyle ':omz:plugins:eza' 'icons' yes
 zstyle ':omz:plugins:eza' 'time-style' long-iso
 zstyle ':omz:plugins:eza' 'hyperlink' yes
+zstyle ':omz:plugins:*' aliases no
 
 # p10k + Oh My Zsh + Plugins
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -54,9 +51,6 @@ zsh-interactive-cd
 source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Skip all plugin aliases
-zstyle ':omz:plugins:*' aliases no
-
 # Aliases
 alias vim="nvim"
 alias vi="nvim"
@@ -67,7 +61,7 @@ alias yayclean='yay -Scc'
 alias cat='bat'
 alias grep='grep --color=auto'
 alias reboot='sudo systemctl reboot'
-alias poweroff='$HOME/git/makizen/poweroffpush.sh && sudo systemctl poweroff'
+alias poweroff='$HOME/dotfiles/poweroffpush.sh && sudo systemctl poweroff'
 alias dmesg='sudo dmesg -HL'
 alias pbpaste="copyq clipboard"
 alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
