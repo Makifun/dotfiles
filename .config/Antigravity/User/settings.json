@@ -1,0 +1,25 @@
+{
+  "terminal.integrated.localEchoEnabled": "off",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 20,
+  "telemetry.telemetryLevel": "off",
+  "gitlens.telemetry.enabled": false,
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "php"
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.advanced.messages": {
+    "suppressDebugLoggingWarning": true
+  },
+  "telemetry.feedback.enabled": false,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.scrollback": 1000000,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "workbench.colorTheme": "Tokyo Night"
+}

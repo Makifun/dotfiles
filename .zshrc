@@ -22,12 +22,13 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # zstyling
+zstyle ':omz:plugins:*' aliases no
 zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'git-status' yes
 zstyle ':omz:plugins:eza' 'icons' yes
 zstyle ':omz:plugins:eza' 'time-style' long-iso
 zstyle ':omz:plugins:eza' 'hyperlink' yes
-zstyle ':omz:plugins:*' aliases no
+zstyle ':omz:plugins:eza' aliases yes
 
 # p10k + Oh My Zsh + Plugins
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -58,36 +59,13 @@ alias cp="rsync -ah --progress"
 alias dig="drill"
 alias yeet='yay -Rcs'
 alias yayclean='yay -Scc'
-alias cat='bat'
 alias grep='grep --color=auto'
 alias reboot='sudo systemctl reboot'
-alias poweroff='$HOME/dotfiles/poweroffpush.sh && sudo systemctl poweroff'
+alias poweroff='$HOME/.dotfiles/poweroffpush.sh && sudo systemctl poweroff'
 alias dmesg='sudo dmesg -HL'
-alias pbpaste="copyq clipboard"
+alias pbpaste="wl-paste"
 alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
 
-# Wrapper for Antigravity to handle cleanup and core dumps
-antigravity() {
-    # Generate a unique ID for this session
-    local UNIT_NAME="antigravity-$(date +%s)"
-    local APP_BIN="/usr/bin/antigravity"
-    local TRIGGER="Lifecycle#onWillShutdown - end 'antigravityAnalytics'"
-
-    echo "[*] Starting Antigravity as systemd unit: $UNIT_NAME"
-
-    # 1. Run the app in a systemd scope to track all child processes.
-    # We use prlimit to disable core dumps and systemd-cat to forward logs.
-    systemd-run --user \
-        --scope \
-        --unit="$UNIT_NAME" \
-        --property=KillMode=control-group \
-        /bin/bash -c "exec prlimit --core=0 \"$APP_BIN\" --verbose \"\$@\" 2>&1 | systemd-cat --identifier=\"$UNIT_NAME\"" -- "$@" &
-
-    # 2. Monitor the journal for the shutdown signal. 
-    # Once detected, kill the entire control group to clean up lingering processes.
-    journalctl --user --identifier="$UNIT_NAME" --follow 2>/dev/null | \
-        grep --line-buffered --max-count=1 "$TRIGGER" && \
-        systemctl --user kill --signal=SIGKILL "$UNIT_NAME.scope"
-
-    echo "[*] Antigravity closed. Cleaned up remaining processes."
-}
+# extra zish functions
+fpath=($HOME/extra_zish/ $fpath)
+autoload -Uz $HOME/extra_zish/*(.:t)

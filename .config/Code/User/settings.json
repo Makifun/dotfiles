@@ -1,0 +1,12 @@
+{
+    "terminal.integrated.localEchoEnabled": "off",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontSize": 13,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 20,
+    "workbench.iconTheme": "material-icon-theme",
+    "telemetry.telemetryLevel": "off",
+    "gitlens.telemetry.enabled": false,
+    "claudeCode.preferredLocation": "panel"
+}
