@@ -20,6 +20,5 @@
   "terminal.integrated.scrollback": 1000000,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
-  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
-  "workbench.colorTheme": "Tokyo Night"
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery"
 }

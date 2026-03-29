@@ -45,6 +45,7 @@ fzf
 fzf-tab
 kate
 kubectl
+terraform
 zsh-autosuggestions
 zsh-syntax-highlighting
 zsh-interactive-cd
@@ -53,18 +54,19 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Aliases
-alias vim="nvim"
-alias vi="nvim"
+alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
 alias cp="rsync -ah --progress"
 alias dig="drill"
-alias yeet='yay -Rcs'
-alias yayclean='yay -Scc'
-alias grep='grep --color=auto'
-alias reboot='sudo systemctl reboot'
-alias poweroff='$HOME/.dotfiles/poweroffpush.sh && sudo systemctl poweroff'
 alias dmesg='sudo dmesg -HL'
+alias grep='grep --color=auto'
 alias pbpaste="wl-paste"
-alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
+alias poweroff='$HOME/.dotfiles/poweroffpush.sh && sudo systemctl poweroff'
+alias reboot='sudo systemctl reboot'
+alias terraform='tofu'
+alias vi="nvim"
+alias vim="nvim"
+alias yayclean='yay -Scc'
+alias yeet='yay -Rcs'
 
 # extra zish functions
 fpath=($HOME/extra_zish/ $fpath)
