@@ -27,7 +27,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
   alias dig="drill"
   alias dmesg='sudo dmesg -HL'
   alias pbpaste="wl-paste"
-  alias poweroff='$HOME/.dotfiles/poweroffpush.sh && sudo systemctl poweroff'
+  alias poweroff='$HOME/.dotfiles/poweroffpush/poweroffpush.sh && sudo systemctl poweroff'
   alias reboot='sudo systemctl reboot'
   alias yayclean='yay -Scc'
   alias yeet='yay -Rcs'
@@ -98,7 +98,5 @@ source $ZSH/oh-my-zsh.sh
 fpath=($HOME/extra_zish/ $fpath)
 autoload -Uz $HOME/extra_zish/*(.:t)
 
-# p10k gitstatus appleshitter disablement
-if [[ "$(uname)" == "Darwin" ]]; then
-  typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true
-fi
+# p10k gitstatus disablement
+typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true
