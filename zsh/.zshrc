@@ -13,7 +13,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # password-manager.zsh
   source ${XDG_CONFIG_HOME:-$HOME/.config/}zsh/password-manager.zsh
   # path
-  export PATH=".:$HOME/bin:$PATH"
+  export PATH="$HOME/bin:$PATH:."
   export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
   export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   # alias
@@ -25,6 +25,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
   # alias
   alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
   alias dig="drill"
+  alias dmesg='sudo dmesg -HL'
   alias pbpaste="wl-paste"
   alias poweroff='$HOME/.dotfiles/poweroffpush.sh && sudo systemctl poweroff'
   alias reboot='sudo systemctl reboot'
@@ -34,7 +35,6 @@ fi
 
 # Common aliases
 alias cp="rsync -ah --progress"
-alias dmesg='sudo dmesg -HL'
 alias grep='grep --color=auto'
 alias sshold="ssh -oHostKeyAlgorithms=+ssh-dss"
 alias terraform='tofu'
@@ -44,6 +44,7 @@ alias vim="nvim"
 # extra zish
 export COLORTERM=truecolor
 export PAGER="bat"
+alias -g Y=" -o yaml | bat -l yaml"
 
 # History
 HISTSIZE=50000
@@ -66,6 +67,7 @@ zstyle ':omz:plugins:eza' 'icons' yes
 zstyle ':omz:plugins:eza' 'time-style' long-iso
 zstyle ':omz:plugins:eza' 'hyperlink' yes
 zstyle ':omz:plugins:eza' aliases yes
+zstyle ':omz:plugins:kubectl' aliases yes
 
 # p10k + Oh My Zsh + Plugins
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -81,6 +83,7 @@ extract
 eza
 fzf
 fzf-tab
+genpass
 kate
 kubectl
 terraform
@@ -94,3 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # extra zish functions
 fpath=($HOME/extra_zish/ $fpath)
 autoload -Uz $HOME/extra_zish/*(.:t)
+
+# p10k gitstatus appleshitter disablement
+if [[ "$(uname)" == "Darwin" ]]; then
+  typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true
+fi
