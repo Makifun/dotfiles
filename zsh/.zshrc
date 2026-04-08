@@ -29,6 +29,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
   alias pbpaste="wl-paste"
   alias poweroff='$HOME/.dotfiles/poweroffpush/poweroffpush.sh && sudo systemctl poweroff'
   alias reboot='sudo systemctl reboot'
+  alias watch='hwatch -d line --border'
   alias yayclean='yay -Scc'
   alias yeet='yay -Rcs'
 fi
