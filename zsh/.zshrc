@@ -42,8 +42,9 @@ alias terraform='tofu'
 alias vi="nvim"
 alias vim="nvim"
 
-# extra zish
+# Extra tweaks
 export COLORTERM=truecolor
+export MANPAGER="bat -plman"
 export PAGER="bat"
 alias -g Y=" -o yaml | bat -l yaml"
 
