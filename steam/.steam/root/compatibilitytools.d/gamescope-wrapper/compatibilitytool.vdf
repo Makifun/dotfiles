@@ -1,0 +1,13 @@
+"compatibilitytools"
+{
+  "compat_tools"
+  {
+    "gamescope-wrapper"
+    {
+      "install_path" "."
+      "display_name" "Gamescope Wrapper (GE-Proton)"
+      "from_oslist"  "windows"
+      "to_oslist"    "linux"
+    }
+  }
+}
