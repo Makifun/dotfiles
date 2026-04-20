@@ -37,7 +37,6 @@ fi
 # Common aliases
 alias cp="rsync -ah --progress"
 alias grep='grep --color=auto'
-alias sshold="ssh -oHostKeyAlgorithms=+ssh-dss"
 alias terraform='tofu'
 alias vi="nvim"
 alias vim="nvim"
