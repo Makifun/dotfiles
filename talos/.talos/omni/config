@@ -1,0 +1,8 @@
+contexts:
+    ligma:
+        url: https://omni.makifun.se/
+        auth:
+            siderov1:
+                identity: makifun@pm.me
+context: ligma
+
