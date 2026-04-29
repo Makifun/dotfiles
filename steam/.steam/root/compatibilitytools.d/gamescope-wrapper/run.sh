@@ -32,6 +32,11 @@ for appid in "${DISABLE_GAMESCOPE_APPIDS[@]}"; do
   fi
 done
 
-exec gamescope -W 3440 -H 1440 -r 175 --force-grab-cursor -f -- \
-  "$PROTON_GE_PATH/proton" "$VERB" "$@"
+# Only wrap launch verbs — install/uninstall/etc. must run bare or Steam hangs
+if [[ "$VERB" == "waitforexitandrun" || "$VERB" == "run" ]]; then
+  exec gamescope -W 3440 -H 1440 -r 175 --force-grab-cursor -f -- \
+    "$PROTON_GE_PATH/proton" "$VERB" "$@"
+else
+  exec "$PROTON_GE_PATH/proton" "$VERB" "$@"
+fi
 

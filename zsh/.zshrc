@@ -8,8 +8,6 @@ export NODE_OPTIONS="--no-deprecation"
 if [[ "$(uname)" == "Darwin" ]]; then
   # fix aws cli ssl error shit
   export AWS_CA_BUNDLE=/opt/homebrew/etc/openssl@3/cert.pem
-  # kubectl krew
-  export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
   # password-manager.zsh
   source ${XDG_CONFIG_HOME:-$HOME/.config/}zsh/password-manager.zsh
   # path
@@ -40,6 +38,10 @@ alias grep='grep --color=auto'
 alias terraform='tofu'
 alias vi="nvim"
 alias vim="nvim"
+
+# k8s
+# kubectl krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Extra tweaks
 export COLORTERM=truecolor
