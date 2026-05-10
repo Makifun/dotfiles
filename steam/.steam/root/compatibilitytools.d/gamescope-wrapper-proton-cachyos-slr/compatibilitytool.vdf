@@ -1,0 +1,13 @@
+"compatibilitytools"
+{
+  "compat_tools"
+  {
+    "gamescope-wrapper-cachyos"
+    {
+      "install_path" "."
+      "display_name" "Gamescope Wrapper (Proton CachyOS)"
+      "from_oslist"  "windows"
+      "to_oslist"    "linux"
+    }
+  }
+}

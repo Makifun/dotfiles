@@ -17,7 +17,7 @@ export PROTON_USE_NTSYNC=1
 export PROTON_LOCAL_SHADER_CACHE=1
 export PROTON_NO_WM_DECORATION=1
 export PROTON_ENABLE_WAYLAND=1
-PROTON_GE_PATH="/usr/share/steam/compatibilitytools.d/proton-ge-custom"
+PROTON_PATH="/usr/share/steam/compatibilitytools.d/proton-ge-custom"
 
 # Games to disable gamescope for
 DISABLE_GAMESCOPE_APPIDS=(
@@ -28,15 +28,15 @@ DISABLE_GAMESCOPE_APPIDS=(
 for appid in "${DISABLE_GAMESCOPE_APPIDS[@]}"; do
   if [[ "$STEAM_COMPAT_APP_ID" == "$appid" ]]; then
     echo "[gamescope-wrapper] Skipping gamescope for AppID: $appid"
-    exec "$PROTON_GE_PATH/proton" "$VERB" "$@"
+    exec "$PROTON_PATH/proton" "$VERB" "$@"
   fi
 done
 
 # Only wrap launch verbs — install/uninstall/etc. must run bare or Steam hangs
 if [[ "$VERB" == "waitforexitandrun" ]]; then
   exec gamescope -W 3440 -H 1440 -r 175 --force-grab-cursor -f -- \
-    "$PROTON_GE_PATH/proton" "$VERB" "$@"
+    "$PROTON_PATH/proton" "$VERB" "$@"
 else
-  exec "$PROTON_GE_PATH/proton" "$VERB" "$@"
+  exec "$PROTON_PATH/proton" "$VERB" "$@"
 fi
 
