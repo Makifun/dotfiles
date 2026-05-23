@@ -22,5 +22,6 @@
   "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
   "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
   "remote.autoForwardPortsSource": "hybrid",
-  "remote.autoForwardPorts": false
+  "remote.autoForwardPorts": false,
+  "nix.formatterPath": "nixfmt"
 }

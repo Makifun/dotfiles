@@ -2,7 +2,7 @@
 
 # Generate a unique ID for this session
 local UNIT_NAME="antigravity-$(date +%s)"
-local APP_BIN="/usr/bin/antigravity"
+local APP_BIN="/opt/antigravity-ide/bin/antigravity-ide"
 local TRIGGER="Lifecycle#onWillShutdown - end 'antigravityAnalytics'"
 
 echo "[*] Starting Antigravity as systemd unit: $UNIT_NAME"
