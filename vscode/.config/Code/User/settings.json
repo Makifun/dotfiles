@@ -8,5 +8,10 @@
     "workbench.iconTheme": "material-icon-theme",
     "telemetry.telemetryLevel": "off",
     "gitlens.telemetry.enabled": false,
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "yaml.schemas": {
+        "file:///home/makifun/.vscode/extensions/continue.continue-1.2.22-linux-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    }
 }
