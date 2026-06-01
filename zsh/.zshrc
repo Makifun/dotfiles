@@ -104,7 +104,7 @@ autoload -Uz $HOME/extra_zish/*(.:t)
 # p10k gitstatus disablement
 typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/makifun/.lmstudio/bin"
-# End of LM Studio CLI section
-
+# LM Studio
+if [ -d "$HOME/.lmstudio/bin" ]; then
+  export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
