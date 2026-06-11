@@ -5,13 +5,13 @@
       "WebFetch(domain:github.com)"
     ]
   },
-  "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true,
-    "caveman@caveman": true
-  },
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline/statusline.sh"
+  },
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true,
+    "caveman@caveman": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
