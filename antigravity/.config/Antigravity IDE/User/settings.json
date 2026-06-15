@@ -23,5 +23,6 @@
   "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
   "remote.autoForwardPortsSource": "hybrid",
   "remote.autoForwardPorts": false,
-  "nix.formatterPath": "nixfmt"
+  "nix.formatterPath": "nixfmt",
+  "python.languageServer": "Default"
 }
