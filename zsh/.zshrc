@@ -104,8 +104,9 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # extra zish functions
-fpath=($HOME/extra_zish/ $fpath)
-autoload -Uz $HOME/extra_zish/*(.:t)
+for file in $HOME/extra_zish/*.zsh; do
+  source "$file"
+done
 
 # p10k gitstatus disablement
 typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true

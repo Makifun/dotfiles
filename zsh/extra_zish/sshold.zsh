@@ -1,0 +1,7 @@
+function sshold() {
+  ssh \
+    -oKexAlgorithms=+diffie-hellman-group14-sha1 \
+    -oHostKeyAlgorithms=+ssh-rsa \
+    -oPubkeyAcceptedAlgorithms=+ssh-rsa \
+    $1
+}

@@ -1,0 +1,3 @@
+function ligmaunlock() {
+    ssh -t ligmaunlock <<< "$(rbw get ligma-luks)"
+}
