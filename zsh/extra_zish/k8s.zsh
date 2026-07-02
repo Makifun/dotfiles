@@ -31,7 +31,7 @@ alias -g PODIMAGE=' -o jsonpath="{.spec.containers[*].image}"'
 alias -g PODIMAGES=' -o jsonpath="{.items[*].spec.containers[*].image}"'
 alias -g LABELS=" -o json | jq -r 'reduce .items[].metadata.labels as \$item ({}; . + \$item)'"
 alias -g PORTS=' -o jsonpath="{.spec.containers[*].ports}"'
-alias -g Y=" -o yaml | batcat -l yaml"
+alias -g Y=" -o yaml | bat -l yaml"
 alias -g SECRET='-o json | jq -r ".data | to_entries[] | .value" | base64 -d'
 
 function Diff() {
