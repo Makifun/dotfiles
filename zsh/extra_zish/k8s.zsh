@@ -34,12 +34,12 @@ alias -g PORTS=' -o jsonpath="{.spec.containers[*].ports}"'
 alias -g Y=" -o yaml | batcat -l yaml"
 alias -g SECRET='-o json | jq -r ".data | to_entries[] | .value" | base64 -d'
 
-Diff() {
+function Diff() {
   app=$1
   argocd app diff $app | bat -l Diff
 }
 
-pods() {
+function pods() {
   FZF_DEFAULT_COMMAND="kubectl get pods --all-namespaces" \
     fzf --info=inline --layout=reverse --header-lines=1 \
     --prompt "$(kubectl config current-context | sed 's/-context$//')> " \
@@ -52,12 +52,12 @@ pods() {
     --preview 'kubectl logs --follow --all-containers --tail=10000 --namespace {1} {2}' "$@"
 }
 
-kl() {
+function kl() {
   kubectl get --show-kind --ignore-not-found $(kubectl api-resources --verbs=list --namespaced --cached=true -o name |
     paste -s -d, -)
 }
 
-kla() {
+function kla() {
   kubectl get --show-kind --ignore-not-found $(kubectl api-resources --verbs=list --namespaced=false --cached=true -o name |
     paste -s -d, -)
 }
