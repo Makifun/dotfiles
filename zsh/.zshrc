@@ -28,8 +28,6 @@ elif [[ "$(uname)" == "Linux" ]]; then
   alias poweroff='$HOME/.dotfiles/poweroffpush/poweroffpush.sh && sudo systemctl poweroff'
   alias reboot='sudo systemctl reboot'
   alias watch='hwatch -d line --border'
-  alias yayclean='yay -Scc'
-  alias yeet='yay -Rcs'
 fi
 
 # Common aliases
@@ -47,10 +45,9 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export COLORTERM=truecolor
 export MANPAGER="bat -plman"
 export PAGER="bat"
-alias -g Y=" -o yaml | bat -l yaml"
 
 # History
-HISTSIZE=50000
+HISTSIZE=500000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
