@@ -70,6 +70,11 @@ zstyle ':omz:plugins:eza' 'icons' yes
 zstyle ':omz:plugins:eza' 'time-style' long-iso
 zstyle ':omz:plugins:eza' 'hyperlink' yes
 zstyle ':omz:plugins:eza' aliases yes
+zstyle ':completion:*:(ssh|scp|sftp|rsync):*' hosts \
+  $(grep -rhE '^Host ' ~/.ssh/config.d 2>/dev/null \
+    | awk '{for (i=2; i<=NF; i++) print $i}' \
+    | grep -vE '[*?]' \
+    | sort -u)
 zstyle ':omz:plugins:kubectl' aliases yes
 
 # p10k + Oh My Zsh + Plugins
@@ -89,6 +94,7 @@ fzf-tab
 genpass
 kate
 kubectl
+ssh
 terraform
 zsh-autosuggestions
 zsh-syntax-highlighting
