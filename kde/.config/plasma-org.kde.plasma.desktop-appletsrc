@@ -21,9 +21,9 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][1][General]
-changedPositions={"desktop:/blocket":["3440x1440","0","1"],"desktop:/bruh":["3440x1440","0","2"],"desktop:/trash:⁄.desktop":["3440x1440","0","0"],"desktop:/widgetz_3080.png":["3440x1440","1","0"]}
+changedPositions={"desktop:/blocket":["2560x1440,,3440x1440","0","1"],"desktop:/bruh":["2560x1440,,3440x1440","0","2"],"desktop:/trash:⁄.desktop":["2560x1440,,3440x1440","0","0"],"desktop:/widgetz_3080.png":["2560x1440,,3440x1440","1","0"]}
 lastResolution=3440x1440
-positions={"3440x1440":["1","31","desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70","0","10","desktop:/debate_lost.jpeg","0","5","desktop:/blocket","0","1","desktop:/4klogos.psd","0","3","desktop:/Medborgarlon_-_Vi_har_rad.pdf","0","7","desktop:/app-debug.apk","0","4","desktop:/net.lutris.ffh-20.desktop","0","6","desktop:/trash:⁄.desktop","0","0","desktop:/neovim_cheaty_cheet.png","0","8","desktop:/bruh","0","2","desktop:/widgetz_3080.png","1","0","desktop:/proxmox_pve8to9.txt","0","9"]}
+positions={"2560x1440":["1","23","desktop:/widgetz_3080.png","1","0","desktop:/blocket","0","1","desktop:/app-debug.apk","0","4","desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70","0","10","desktop:/neovim_cheaty_cheet.png","0","8","desktop:/proxmox_pve8to9.txt","0","9","desktop:/net.lutris.ffh-20.desktop","0","6","desktop:/Medborgarlon_-_Vi_har_rad.pdf","0","7","desktop:/bruh","0","2","desktop:/trash:⁄.desktop","0","0","desktop:/debate_lost.jpeg","0","5","desktop:/4klogos.psd","0","3"],"3440x1440":["1","31","desktop:/widgetz_3080.png","1","0","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4","0","11","desktop:/blocket","0","1","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fdash-11.m4a.part","0","12","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag5.part","0","13","desktop:/app-debug.apk","0","4","desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70","0","10","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part","0","11","desktop:/neovim_cheaty_cheet.png","0","8","desktop:/proxmox_pve8to9.txt","0","9","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag2.part","0","13","desktop:/net.lutris.ffh-20.desktop","0","6","desktop:/Medborgarlon_-_Vi_har_rad.pdf","0","7","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fdash-11.m4a","0","12","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..temp.mp4","0","13","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag4.part","0","13","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..mp4","0","11","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.ytdl","0","12","desktop:/bruh","0","2","desktop:/trash:⁄.desktop","0","0","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag4","0","13","desktop:/debate_lost.jpeg","0","5","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag1.part","0","13","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag3.part","0","13","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag5","0","13","desktop:/4klogos.psd","0","3","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag3","0","13","desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..fhls-1358.mp4.part-Frag2","0","13"]}
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
@@ -32,6 +32,7 @@ SlidePaths=/usr/share/wallpapers/
 
 [Containments][109]
 ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
+ItemGeometries-3440x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
 ItemGeometriesHorizontal=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
 activityId=
 formfactor=0
@@ -100,6 +101,10 @@ highPrioritySensorIds=["memory/physical/used"]
 [Containments][109][Applets][101][Configuration][SensorColors]
 memory/physical/used=0,170,255
 
+[Containments][109][Applets][101][Configuration][SensorLabels]
+memory/physical/total=Total
+memory/physical/used=Used
+
 [Containments][109][Applets][101][Configuration][Sensors]
 highPrioritySensorIds=["memory/physical/used"]
 lowPrioritySensorIds=["memory/physical/total"]
@@ -124,7 +129,7 @@ DialogWidth=720
 [Containments][109][Applets][102][Configuration][SensorColors]
 gpu/all/totalVram=218,61,233
 gpu/gpu0/temperature=233,61,80
-gpu/gpu0/usage=61,122,233
+gpu/gpu0/usage=61,174,233
 gpu/gpu1/usage=0,170,255
 
 [Containments][109][Applets][102][Configuration][SensorLabels]
@@ -334,13 +339,12 @@ popupWidth=810
 
 [Containments][109][Applets][29][Configuration][Appearance]
 autoFontAndSize=false
-customDateFormat=dddd yyyy-MM-dd
+customDateFormat=dddd
 dateDisplayFormat=BelowTime
 dateFormat=custom
 enabledCalendarPlugins=holidaysevents
-firstDayOfWeek=1
 fontFamily=Cantarell
-fontSize=8
+fontSize=7
 fontStyleName=Regular
 fontWeight=400
 showWeekNumbers=true
@@ -355,15 +359,19 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][109][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/makifun/Pictures/wallpappe/widescreen/wallhaven-7jgyre.jpg
-SlideInterval=3600
+Image=file:///home/makifun/Pictures/wallpappe/widescreen/wallhaven-6ljx8x.jpg
+SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 
 [Containments][110]
 ItemGeometries-2560x1440=
 ItemGeometriesHorizontal=
 activityId=
+formfactor=0
+immutability=1
 lastScreen=2
+location=0
+plugin=org.kde.desktopcontainment
 wallpaperplugin=org.kde.slideshow
 
 [Containments][110][ConfigDialog]
@@ -371,8 +379,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][110][Wallpaper][org.kde.slideshow][General]
-Image=file:///home/makifun/Pictures/wallpappe/widescreen/wallhaven-85yl61.png
-SlideInterval=3600
+Image=file:///home/makifun/Pictures/wallpappe/widescreen/wallhaven-5g22q5.png
+SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 
 [Containments][4]
@@ -391,6 +399,13 @@ plugin=org.kde.plasma.digitalclock
 [Containments][4][Applets][23][Configuration]
 popupHeight=400
 popupWidth=560
+
+[Containments][4][Applets][23][Configuration][Appearance]
+dateFormat=isoDate
+
+[Containments][4][Applets][23][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
 
 [Containments][4][Applets][24]
 immutability=1
@@ -440,6 +455,10 @@ plugin=org.kde.kdeconnect
 [Containments][4][Applets][9][Applets][11]
 immutability=1
 plugin=org.kde.plasma.gamemode
+
+[Containments][4][Applets][9][Applets][111]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
 
 [Containments][4][Applets][9][Applets][12]
 immutability=1
@@ -505,4 +524,4 @@ AppletOrder=5;6;7;8;9;23;24
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/debate_lost.jpeg,0,,desktop:/app-debug.apk,0,,desktop:/trash:⁄.desktop,0,,desktop:/blocket,0,,desktop:/neovim_cheaty_cheet.png,0,,desktop:/4klogos.psd,0,,desktop:/net.lutris.ffh-20.desktop,0,,desktop:/bruh,0,,desktop:/Medborgarlon_-_Vi_har_rad.pdf,0,,desktop:/proxmox_pve8to9.txt,0,,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,0,
+screenMapping=desktop:/net.lutris.ffh-20.desktop,0,,desktop:/blocket,0,,desktop:/debate_lost.jpeg,0,,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,0,,desktop:/trash:⁄.desktop,0,,desktop:/neovim_cheaty_cheet.png,0,,desktop:/app-debug.apk,0,,desktop:/4klogos.psd,0,,desktop:/20260705-Truck_carrying_ammonia_nitrate_burns_then_blows_up..mp4,0,,desktop:/Medborgarlon_-_Vi_har_rad.pdf,0,,desktop:/proxmox_pve8to9.txt,0,,desktop:/bruh,0,
