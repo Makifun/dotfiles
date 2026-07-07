@@ -20,12 +20,6 @@ function kcc() {
   kubectl config use-context ${ctx}
 }
 
-function kg() {
-  name=$1
-  kubectl get po -l name="$name" 2>/dev/null
-  kubectl get po -l app.kubernetes.io/name="$name" 2>/dev/null
-}
-
 alias WP='watch -t "kubectl get pod"'
 alias -g PODIMAGE=' -o jsonpath="{.spec.containers[*].image}"'
 alias -g PODIMAGES=' -o jsonpath="{.items[*].spec.containers[*].image}"'
