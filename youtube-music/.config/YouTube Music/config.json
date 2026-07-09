@@ -191,6 +191,9 @@
 		},
 		"in-app-menu": {
 			"enabled": false
+		},
+		"do-not-track": {
+			"enabled": true
 		}
 	},
 	"__internal__": {
