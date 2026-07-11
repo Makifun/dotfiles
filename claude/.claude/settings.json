@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
+      "Bash(gh api *)",
+      "Bash(gh repo *)",
+      "Bash(gh search *)",
       "Bash(git:*)",
+      "Bash(kubectl describe *)",
+      "Bash(kubectl get *)",
+      "Bash(kubectl logs *)",
+      "Bash(nix flake *)",
+      "Bash(nix search *)",
+      "Bash(nixfmt *)",
+      "Bash(rg *)",
+      "Bash(tofu fmt *)",
+      "Bash(tofu validate *)",
       "WebFetch(domain:github.com)"
     ]
   },
