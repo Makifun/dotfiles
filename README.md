@@ -11,3 +11,11 @@ git config filter.yt-music-config.required true
 ```
 
 `jq` must be installed for this to work.
+
+Also register the git filter for the KDE Plasma desktop config. This prevents desktop icon positions, screen mappings, and wallpaper paths from being committed:
+
+```sh
+git config filter.strip-plasma-positions.clean "grep -Ev '^(positions|screenMapping|Image|changedPositions)='"
+git config filter.strip-plasma-positions.smudge cat
+git config filter.strip-plasma-positions.required true
+```
