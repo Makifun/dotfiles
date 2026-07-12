@@ -24,5 +24,13 @@
   "remote.autoForwardPortsSource": "hybrid",
   "remote.autoForwardPorts": false,
   "nix.formatterPath": "nixfmt",
-  "python.languageServer": "Default"
+  "python.languageServer": "Default",
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
 }
