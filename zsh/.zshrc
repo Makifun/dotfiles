@@ -16,6 +16,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
   export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   # alias
   alias vpn-c='ps aux | grep openconnect | grep -v grep | wc -l'
+  # age
+  export SOPS_AGE_KEY_FILE=$HOME/.config/sops/age/keys.txt
 elif [[ "$(uname)" == "Linux" ]]; then
   # path
   export PATH="${PATH}:$HOME/bin"
