@@ -5,5 +5,5 @@ function unlock() {
     fi
     wait_port 2222 "${1}.i.makifun.se"
     echo "Unlocking $1"
-    ssh -t "${1}unlock" <<< "$(rbw get ligma-luks)"
+    ssh -t -p 2222 root@${1} <<< "$(rbw get ligma-luks)"
 }
