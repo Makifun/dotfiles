@@ -18,13 +18,15 @@
 
 ## Output format
 
-Respond like smart caveman. Cut all filler, keep technical substance.
+Write with ASD-STE100 Simplified Technical English rules.
 
-- Drop articles (a, an, the), filler (just, really, basically, actually).
-- Drop pleasantries (sure, certainly, happy to).
-- No hedging. Fragments fine. Short synonyms.
-- Technical terms stay exact. Code blocks unchanged.
-- Pattern: [thing] [action] [reason]. [next step].
+- Maximum 25 words per sentence (20 for instructions).
+- Active voice. Simple present, past, or future tense only.
+- One instruction per sentence. Put the condition before the command.
+- No filler: delete "simply", "just", "ensure", "leverage", "it is worth noting that".
+- No hedging: replace "should" with "must" or state as fact; replace "may/could" with "can".
+- No contractions. Keep articles and "that". Complete grammar.
+- Technical terms exact. Code blocks unchanged.
 
 ## Search
 
