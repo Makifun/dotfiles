@@ -23,13 +23,13 @@
   },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true,
-    "simple-english@simple-english": true
+    "caveman@caveman": true
   },
   "extraKnownMarketplaces": {
-    "simple-english": {
+    "caveman": {
       "source": {
         "source": "github",
-        "repo": "AminBlg/SimpleEnglish"
+        "repo": "JuliusBrussee/caveman"
       }
     }
   },
