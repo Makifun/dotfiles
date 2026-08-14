@@ -21,7 +21,7 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][1][General]
-lastResolution=3440x1440
+lastResolution=640x480
 sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
