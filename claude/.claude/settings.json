@@ -35,6 +35,5 @@
   },
   "alwaysThinkingEnabled": true,
   "tui": "default",
-  "switchModelsOnFlag": true,
-  "model": "claude-sonnet-4-6"
+  "switchModelsOnFlag": true
 }
