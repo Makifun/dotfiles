@@ -35,5 +35,39 @@
   },
   "alwaysThinkingEnabled": true,
   "tui": "default",
-  "switchModelsOnFlag": true
+  "switchModelsOnFlag": true,
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: None configured",
+      "**Cloud provider(s)**: Proxmox VE (self-hosted, hosts ligma/bofa/sugma/jonny); Garage S3 (self-hosted, on ligma)",
+      "**Repository visibility**: Not queryable here (no remotes configured on this repo) — assume private per default heuristic",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: SOPS + age (NixOS/Terraform state/service env vars, two recipients: ligma SSH host key and makifun user key); Vaultwarden at https://vault.makifun.se for user-facing passwords/API keys",
+      "**Default / protected branches**: Not queryable here (no git remote configured; origin/HEAD unset) — repository visibility/branch protection could not be checked via gh",
+      "**CI/CD deploy targets**: sugma Kubernetes cluster via Flux CD (GitOps, watches sugma Forgejo repo, syncs k8s/); ligma NixOS auto-upgrade pulls from github:makifun/nixos on push",
+      "**Network posture**: Homelab-internal (10.10.10.0/24 Proxmox network); services exposed via Traefik + Authentik SSO at *.makifun.se",
+      "**Source control**: This repo (/mnt/870evo2tb1/git/homelab) — no remotes configured; also referenced: git.makifun.se (Forgejo, self-hosted) and github:makifun/nixos (auto-pulled by ligma)",
+      "**Trusted internal domains**: *.makifun.se (Traefik/Authentik-fronted homelab services: vault, auth, git, homepage, graylog, backrest, omni, gotify, beszel, traefik-ligma, prometheus, backrest-sugma)",
+      "**Trusted cloud buckets**: pg-general-apps (config-derived — not a confirmed upload destination; uploads of local data still require confirmation)",
+      "**Key internal services**: Traefik (TLS/forwardAuth), Authentik (SSO, auth.makifun.se), Forgejo (git.makifun.se), Vaultwarden (vault.makifun.se), Omni (omni.makifun.se, Talos cluster manager), Backrest (backrest.makifun.se, Restic backup manager), Homepage (homepage.makifun.se), Graylog (graylog.makifun.se), Garage S3 (on ligma), TimescaleDB/tracearr (on bofa)",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: authentik/terraform.tfstate(.backup) and terraform.tfvars (Authentik SSO config incl. secrets); nixos/**/secrets.yaml (SOPS-encrypted host secrets for bofa/ligma/playma/common); sugma/terraform/terraform.tfstate(.backup) (Proxmox VM provisioning state); authentik/.envrc and sugma/.envrc — share only with cleared homelab administrator (makifun)",
+      "**Data retention / declassification**: bofa daily pg_dump to /bofa/dumps with 30-day retention; Backrest S3 backups",
+      "**Sensitive remote targets**: any namespace/host/container matching `prod`/`production` as a whole word or segment (none observed by name in this repo, but the heuristic still applies); by extension, treat ligma/bofa/sugma production-serving namespaces (authentik, postgres, tracearr, backrest, cnpg-system, media) as sensitive given they host live homelab services",
+      "**Protected deployment namespaces / environments**: sugma k8s namespaces authentik, postgres, cnpg-system, tracearr, backrest, media, monitoring, velero, flux-system, kube-system, nfs-provisioner (production-serving homelab workloads per CLAUDE.md)",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod`/`production`; also authentik/*.tf (SSO/IAM-equivalent), sugma/terraform/*.tf (Proxmox VM/node provisioning), nixos/**/secrets.yaml (host secrets)",
+      "### User-specific",
+      "**Primary use of Claude Code**: homelab infrastructure-as-code (NixOS, OpenTofu/Terraform, Kubernetes/Flux, Proxmox) administration and troubleshooting",
+      "**Trusted repo**: /mnt/870evo2tb1/git/homelab (no remotes configured — purely local checkout)",
+      "**Org-specific CLIs**: talosctl, omnictl, flux, sugma.sh, sops_refresh_key.sh, nh (nix helper)",
+      "**Routine under <user>/ prefix**: none observed"
+    ],
+    "soft_deny": [
+      "$defaults",
+      "Bash(talosctl reset:*) in this repo's sugma cluster context — destructive node wipe",
+      "Bash(omnictl delete:*) — cluster/machine deletion via Omni",
+      "kubectl delete on namespaces authentik, postgres, cnpg-system, tracearr, backrest, media (production-serving homelab workloads per CLAUDE.md)"
+    ]
+  }
 }
