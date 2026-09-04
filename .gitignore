@@ -34,3 +34,4 @@ zsh/extra_zish/*appleshit.zsh
 /antigravity/.config/Antigravity IDE/TransportSecurity
 /antigravity/.config/Antigravity IDE/User/History
 /environment.d/.config/environment.d/10-home-manager.conf
+/environment.d/.config/environment.d/50-ssh-askpass.conf
