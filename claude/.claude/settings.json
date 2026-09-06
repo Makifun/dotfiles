@@ -23,7 +23,8 @@
   },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true,
-    "simple-english@simple-english": true
+    "simple-english@simple-english": true,
+    "okf@scaccogatto": true
   },
   "extraKnownMarketplaces": {
     "simple-english": {
@@ -31,12 +32,24 @@
         "source": "github",
         "repo": "AminBlg/SimpleEnglish"
       }
+    },
+    "scaccogatto": {
+      "source": {
+        "source": "github",
+        "repo": "scaccogatto/okf-skills"
+      }
     }
   },
   "alwaysThinkingEnabled": true,
   "tui": "default",
   "switchModelsOnFlag": true,
   "autoMode": {
+    "soft_deny": [
+      "$defaults",
+      "Bash(talosctl reset:*) in this repo's sugma cluster context — destructive node wipe",
+      "Bash(omnictl delete:*) — cluster/machine deletion via Omni",
+      "kubectl delete on namespaces authentik, postgres, cnpg-system, tracearr, backrest, media (production-serving homelab workloads per CLAUDE.md)"
+    ],
     "environment": [
       "### Org-wide",
       "**Organization**: None configured",
@@ -62,12 +75,6 @@
       "**Trusted repo**: /mnt/870evo2tb1/git/homelab (no remotes configured — purely local checkout)",
       "**Org-specific CLIs**: talosctl, omnictl, flux, sugma.sh, sops_refresh_key.sh, nh (nix helper)",
       "**Routine under <user>/ prefix**: none observed"
-    ],
-    "soft_deny": [
-      "$defaults",
-      "Bash(talosctl reset:*) in this repo's sugma cluster context — destructive node wipe",
-      "Bash(omnictl delete:*) — cluster/machine deletion via Omni",
-      "kubectl delete on namespaces authentik, postgres, cnpg-system, tracearr, backrest, media (production-serving homelab workloads per CLAUDE.md)"
     ]
   }
 }
