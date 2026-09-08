@@ -22,6 +22,8 @@ elif [[ "$(uname)" == "Linux" ]]; then
   # path
   export PATH="${PATH}:$HOME/bin"
   export PATH="${PATH}:$HOME/go/bin"
+  export PNPM_HOME="$HOME/.local/share/pnpm"
+  export PATH="${PATH}:$PNPM_HOME/bin"
   # alias
   alias claude='NPM_CONFIG_PREFIX=$(pnpm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
   alias dig="drill"
