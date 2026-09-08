@@ -28,6 +28,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
   alias claude='NPM_CONFIG_PREFIX=$(pnpm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
   alias dig="drill"
   alias dmesg='sudo dmesg -HL --ctime'
+  alias pbcopy="wl-copy"
   alias pbpaste="wl-paste"
   alias poweroff='$HOME/.dotfiles/poweroffpush/poweroffpush.sh && sudo systemctl poweroff'
   alias reboot='sudo systemctl reboot'
