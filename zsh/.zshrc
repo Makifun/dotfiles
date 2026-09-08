@@ -23,7 +23,7 @@ elif [[ "$(uname)" == "Linux" ]]; then
   export PATH="${PATH}:$HOME/bin"
   export PATH="${PATH}:$HOME/go/bin"
   # alias
-  alias claude='NPM_CONFIG_PREFIX=$(npm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
+  alias claude='NPM_CONFIG_PREFIX=$(pnpm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
   alias dig="drill"
   alias dmesg='sudo dmesg -HL --ctime'
   alias pbpaste="wl-paste"
