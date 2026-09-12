@@ -1,5 +1,0 @@
-"manifest"
-{
-  "commandline" "/run.sh %verb%"
-  "version"     "2"
-}
