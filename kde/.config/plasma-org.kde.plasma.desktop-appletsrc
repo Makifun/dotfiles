@@ -6,9 +6,9 @@ RightButton;NoModifier=org.kde.contextmenu
 RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][110]
-ItemGeometries-2560x1440=Applet-101:2400,272,160,128,0;Applet-100:2400,80,160,192,0;Applet-29:2400,0,160,80,0;Applet-103:2400,608,160,128,0;Applet-102:2400,400,160,208,0;Applet-104:2400,736,160,128,0;Applet-107:2400,1120,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-108:2400,1248,160,192,0;
+ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
 ItemGeometries-640x480=Applet-29:480,0,160,80,0;Applet-104:0,352,160,128,0;Applet-103:160,352,160,128,0;Applet-102:320,241.85,160,240,0;Applet-100:480,80,160,192,0;Applet-101:480,272,160,128,0;Applet-105:2400,864,160,115,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
-ItemGeometriesHorizontal=Applet-29:480,0,160,80,0;Applet-104:0,352,160,128,0;Applet-103:160,352,160,128,0;Applet-102:320,241.85,160,240,0;Applet-100:480,80,160,192,0;Applet-101:480,272,160,128,0;Applet-105:2400,864,160,115,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
+ItemGeometriesHorizontal=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
 activityId=
 formfactor=0
 immutability=1
@@ -337,103 +337,44 @@ DialogWidth=810
 SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 
-[Containments][112]
-ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
+[Containments][116]
 ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=
-formfactor=0
-immutability=1
-lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
+lastScreen=0
 wallpaperplugin=org.kde.image
 
-[Containments][112][ConfigDialog]
+[Containments][116][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][112][Wallpaper][org.kde.image][General]
-SlidePaths=/usr/share/wallpapers/
-
-[Containments][112][Wallpaper][org.kde.slideshow][General]
-SlideInterval=43200
-SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
-
-[Containments][113]
-ItemGeometries-3440x1440=
-ItemGeometriesHorizontal=
-activityId=
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.desktopcontainment
-wallpaperplugin=org.kde.slideshow
-
-[Containments][113][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][113][General]
-lastResolution=2560x1440
+[Containments][116][General]
+lastResolution=3440x1440
 sortMode=-1
 
-[Containments][113][Wallpaper][org.kde.image][General]
+[Containments][116][Wallpaper][org.kde.image][General]
 SlidePaths=/usr/share/wallpapers/
 
-[Containments][113][Wallpaper][org.kde.slideshow][General]
+[Containments][116][Wallpaper][org.kde.slideshow][General]
 SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 
-[Containments][114]
+[Containments][117]
 ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
 ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=
-formfactor=0
-immutability=1
-lastScreen=3
-location=0
-plugin=org.kde.desktopcontainment
+lastScreen=1
 wallpaperplugin=org.kde.slideshow
 
-[Containments][114][ConfigDialog]
+[Containments][117][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
-[Containments][114][General]
-lastResolution=3440x1440
-sortMode=-1
-
-[Containments][114][Wallpaper][org.kde.slideshow][General]
-SlideInterval=43200
-SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
-
-[Containments][115]
-ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
-ItemGeometries-3440x1440=
-ItemGeometriesHorizontal=
-activityId=
-formfactor=0
-immutability=1
-lastScreen=4
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.slideshow
-
-[Containments][115][ConfigDialog]
-DialogHeight=630
-DialogWidth=810
-
-[Containments][115][General]
-lastResolution=3440x1440
-sortMode=-1
-
-[Containments][115][Wallpaper][org.kde.image][General]
+[Containments][117][Wallpaper][org.kde.image][General]
 SlidePaths=/usr/share/wallpapers/
 
-[Containments][115][Wallpaper][org.kde.slideshow][General]
+[Containments][117][Wallpaper][org.kde.slideshow][General]
 SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 
@@ -441,7 +382,7 @@ SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 activityId=
 formfactor=2
 immutability=1
-lastScreen=1
+lastScreen=0
 location=4
 plugin=org.kde.panel
 wallpaperplugin=org.kde.image
@@ -577,4 +518,4 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmana
 AppletOrder=5;6;7;8;9;23;24
 
 [ScreenMapping]
-itemsOnDisabledScreens=
+itemsOnDisabledScreens=1,,10,desktop:/blocket,desktop:/debate_lost.jpeg,desktop:/Medborgarlon_-_Vi_har_rad.pdf,desktop:/neovim_cheaty_cheet.png,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/proxmox_pve8to9.txt,desktop:/net.lutris.ffh-20.desktop,desktop:/trash:⁄.desktop,desktop:/4klogos.psd,desktop:/bruh
