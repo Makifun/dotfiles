@@ -341,7 +341,11 @@ SlidePaths=/home/makifun/Pictures/wallpappe/widescreen/
 ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=
+formfactor=0
+immutability=1
 lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][116][ConfigDialog]
@@ -364,8 +368,12 @@ ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;
 ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=
+formfactor=0
+immutability=1
 lastScreen=1
-wallpaperplugin=org.kde.slideshow
+location=0
+plugin=org.kde.desktopcontainment
+wallpaperplugin=org.kde.image
 
 [Containments][117][ConfigDialog]
 DialogHeight=630
@@ -518,4 +526,4 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmana
 AppletOrder=5;6;7;8;9;23;24
 
 [ScreenMapping]
-itemsOnDisabledScreens=1,,10,desktop:/blocket,desktop:/debate_lost.jpeg,desktop:/Medborgarlon_-_Vi_har_rad.pdf,desktop:/neovim_cheaty_cheet.png,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/proxmox_pve8to9.txt,desktop:/net.lutris.ffh-20.desktop,desktop:/trash:⁄.desktop,desktop:/4klogos.psd,desktop:/bruh
+itemsOnDisabledScreens=1,,10,desktop:/neovim_cheaty_cheet.png,desktop:/4klogos.psd,desktop:/Medborgarlon_-_Vi_har_rad.pdf,desktop:/debate_lost.jpeg,desktop:/blocket,desktop:/net.lutris.ffh-20.desktop,desktop:/proxmox_pve8to9.txt,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/trash:⁄.desktop,desktop:/bruh
