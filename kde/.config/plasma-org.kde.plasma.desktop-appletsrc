@@ -526,4 +526,4 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmana
 AppletOrder=5;6;7;8;9;23;24
 
 [ScreenMapping]
-itemsOnDisabledScreens=1,,10,desktop:/neovim_cheaty_cheet.png,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/4klogos.psd,desktop:/net.lutris.ffh-20.desktop,desktop:/proxmox_pve8to9.txt,desktop:/blocket,desktop:/trash:⁄.desktop,desktop:/bruh,desktop:/debate_lost.jpeg,desktop:/Medborgarlon_-_Vi_har_rad.pdf
+itemsOnDisabledScreens=1,,10,desktop:/4klogos.psd,desktop:/neovim_cheaty_cheet.png,desktop:/blocket,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/Medborgarlon_-_Vi_har_rad.pdf,desktop:/debate_lost.jpeg,desktop:/net.lutris.ffh-20.desktop,desktop:/trash:⁄.desktop,desktop:/bruh,desktop:/proxmox_pve8to9.txt
