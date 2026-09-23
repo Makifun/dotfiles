@@ -3,12 +3,25 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.fontSize": 13,
+    "terminal.integrated.scrollback": 1000000,
     "editor.fontSize": 16,
     "editor.lineHeight": 20,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
     "workbench.iconTheme": "material-icon-theme",
     "telemetry.telemetryLevel": "off",
-    "gitlens.telemetry.enabled": false,
     "claudeCode.preferredLocation": "panel",
+    "remote.autoForwardPortsSource": "hybrid",
+    "remote.autoForwardPorts": false,
+    "nix.formatterPath": "nixfmt",
+    "python.languageServer": "Default",
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml"
+    ],
     "yaml.schemas": {
         "file:///home/makifun/.vscode/extensions/continue.continue-1.2.22-linux-x64/config-yaml-schema.json": [
             ".continue/**/*.yaml"
@@ -16,5 +29,10 @@
         "file:///home/makifun/.vscode/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
             ".continue/**/*.yaml"
         ]
-    }
+    },
+    "gitlens.telemetry.enabled": false,
+    "gitlens.blame.line.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false
 }
