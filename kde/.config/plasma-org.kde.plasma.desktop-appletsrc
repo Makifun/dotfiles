@@ -12,7 +12,7 @@ ItemGeometriesHorizontal=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;
 activityId=
 formfactor=0
 immutability=1
-lastScreen=2
+lastScreen=1
 location=0
 plugin=org.kde.desktopcontainment
 wallpaperplugin=org.kde.slideshow
@@ -370,7 +370,7 @@ ItemGeometriesHorizontal=
 activityId=
 formfactor=0
 immutability=1
-lastScreen=1
+lastScreen=2
 location=0
 plugin=org.kde.desktopcontainment
 wallpaperplugin=org.kde.slideshow
@@ -526,4 +526,4 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmana
 AppletOrder=5;6;7;8;9;23;24
 
 [ScreenMapping]
-itemsOnDisabledScreens=1,,10,desktop:/trash:⁄.desktop,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/Medborgarlon_-_Vi_har_rad.pdf,desktop:/4klogos.psd,desktop:/blocket,desktop:/debate_lost.jpeg,desktop:/neovim_cheaty_cheet.png,desktop:/bruh,desktop:/net.lutris.ffh-20.desktop,desktop:/proxmox_pve8to9.txt
+itemsOnDisabledScreens=1,,10,desktop:/blocket,desktop:/net.lutris.ffh-20.desktop,desktop:/bruh,desktop:/trash:⁄.desktop,desktop:/debate_lost.jpeg,desktop:/neovim_cheaty_cheet.png,desktop:/Medborgarlon_-_Vi_har_rad.pdf,desktop:/proxmox_pve8to9.txt,desktop:/UTC--2021-01-19T15-41-18.951Z--c98fc6f2f6b0dbd42551e38807e4fe2120083b70,desktop:/4klogos.psd
