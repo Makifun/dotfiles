@@ -27,8 +27,15 @@
         "tasks": [
             {
                 "label": "claude",
-                "type": "shell",
-                "command": "claude",
+                "type": "process",
+                "command": "zsh",
+                "args": [
+                    "-ic",
+                    "claude"
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder:dotfiles}"
+                },
                 "isBackground": true,
                 "icon": {
                     "id": "robot",
