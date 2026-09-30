@@ -1,0 +1,87 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "dotfiles"
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.nix": "nix"
+        },
+        "git.autofetch": true,
+        "git.autofetchPeriod": 180,
+        "editor.formatOnSave": true,
+        "terminal.integrated.tabs.enabled": true,
+        "terminal.integrated.enablePersistentSessions": true,
+        "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose"
+    },
+    "extensions": {
+        "recommendations": [
+            "jnoortheen.nix-ide",
+            "redhat.vscode-yaml"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "claude",
+                "type": "shell",
+                "command": "claude",
+                "isBackground": true,
+                "icon": {
+                    "id": "robot",
+                    "color": "terminal.ansiMagenta"
+                },
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "new",
+                    "echo": false
+                },
+                "problemMatcher": [],
+                "runOptions": {
+                    "instanceLimit": 1
+                }
+            },
+            {
+                "label": "zsh",
+                "type": "process",
+                "command": "zsh",
+                "isBackground": true,
+                "options": {
+                    "cwd": "${workspaceFolder:dotfiles}"
+                },
+                "icon": {
+                    "id": "home",
+                    "color": "terminal.ansiCyan"
+                },
+                "presentation": {
+                    "reveal": "silent",
+                    "panel": "new",
+                    "echo": false
+                },
+                "problemMatcher": [],
+                "runOptions": {
+                    "instanceLimit": 1
+                }
+            },
+            {
+                "label": "Open All Terminals",
+                "dependsOn": [
+                    "claude",
+                    "zsh"
+                ],
+                "dependsOrder": "parallel",
+                "runOptions": {
+                    "runOn": "folderOpen",
+                    "instanceLimit": 1
+                },
+                "presentation": {
+                    "reveal": "never"
+                },
+                "problemMatcher": []
+            }
+        ]
+    }
+}
