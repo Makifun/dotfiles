@@ -183,13 +183,14 @@ claude() {
     # ── Summary ────────────────────────────────────────────────────
     print "╔══════════════════════════════════════════════════════╗"
     print "║  Claude Code — External Bubblewrap Sandbox           ║"
-    print "╠══════════════════════════════════════════════════════╣"
-    print "║  Project:  ${project_dir:t}"
-    print "║  Network:  OPEN (no restrictions)"
-    print "║  Env:      cleared (allowlist only)"
-    print "║  FS Write: project + ~/.claude"
-    print "║  /tmp:     private tmpfs (not shared with host)"
-    print "║  FS Read:  system, gh, git, ssh (git key), kube"
+    print "╚══════════════════════════════════════════════════════╝"
+    print "   Project:  ${project_dir:t}                           "
+    print "╔══════════════════════════════════════════════════════╗"
+    print "║  Network:  OPEN (no restrictions)                    ║"
+    print "║  Env:      cleared (allowlist only)                  ║"
+    print "║  FS Write: project + ~/.claude                       ║"
+    print "║  /tmp:     private tmpfs (not shared with host)      ║"
+    print "║  FS Read:  system, gh, git, ssh (git key), kube      ║"
     print "╚══════════════════════════════════════════════════════╝"
     print
 
