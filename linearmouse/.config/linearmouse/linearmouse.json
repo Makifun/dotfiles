@@ -1,0 +1,56 @@
+{
+  "schemes" : [
+    {
+      "scrolling" : {
+        "speed" : 0,
+        "acceleration" : 1,
+        "distance" : {
+          "horizontal" : "65.5px",
+          "vertical" : "61.3px"
+        }
+      },
+      "if" : {
+        "device" : {
+          "productName" : "MX Master 2S",
+          "vendorID" : "0x46d",
+          "serialNumber" : "E248A64E509E6DE8",
+          "category" : "mouse",
+          "productID" : "0xb019"
+        }
+      },
+      "buttons" : {
+        "universalBackForward" : true
+      },
+      "pointer" : {
+        "speed" : 0.1054,
+        "disableAcceleration" : false,
+        "acceleration" : 0.875
+      }
+    },
+    {
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 0
+        },
+        "distance" : {
+          "vertical" : 5
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc539",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "speed" : 0.12
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}
