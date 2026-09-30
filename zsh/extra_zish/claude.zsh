@@ -83,7 +83,7 @@ claude() {
         local gh_token=$(<$gh_token_file)   # trailing newline stripped
         if [[ -n $gh_token ]]; then
             secret_args+=(--setenv GH_TOKEN $gh_token)
-            gh_state="token from ~/.config/gh-sandbox-token"
+            gh_state="~/.config/gh-sandbox-token"
         fi
     fi
 
