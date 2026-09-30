@@ -16,8 +16,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   # alias
   alias vpn-c='ps aux | grep openconnect | grep -v grep | wc -l'
-  # age
-  export SOPS_AGE_KEY_FILE=$HOME/.config/sops/age/keys.txt
 elif [[ "$(uname)" == "Linux" ]]; then
   # path
   export PATH="${PATH}:$HOME/bin"
@@ -25,7 +23,6 @@ elif [[ "$(uname)" == "Linux" ]]; then
   export PNPM_HOME="$HOME/.local/share/pnpm"
   export PATH="${PATH}:$PNPM_HOME/bin"
   # alias
-  alias claude='NPM_CONFIG_PREFIX=$(pnpm -g prefix) SRT_DEBUG=1 EDITOR=vim /usr/bin/claude'
   alias dig="drill"
   alias dmesg='sudo dmesg -HL --ctime'
   alias pbcopy="wl-copy"
@@ -41,6 +38,9 @@ alias grep='grep --color=auto'
 alias terraform='tofu'
 alias vi="nvim"
 alias vim="nvim"
+
+# age
+export SOPS_AGE_KEY_FILE=$HOME/.config/sops/age/keys.txt
 
 # k8s
 # kubectl krew
@@ -112,8 +112,3 @@ done
 
 # p10k gitstatus disablement
 typeset -g POWERLEVEL9K_DISABLE_GITSTATUS=true
-
-# LM Studio
-if [ -d "$HOME/.lmstudio/bin" ]; then
-  export PATH="$PATH:$HOME/.lmstudio/bin"
-fi

@@ -16,13 +16,13 @@
 #   claude-sandbox /path/to/project                    # specific project
 #   claude-sandbox /path/to/project --print "do thing" # pass args to claude
 
-claude-sandbox() {
+claude() {
     # Local option scope: nothing here leaks into your interactive shell.
     emulate -L zsh
     setopt err_return pipe_fail
 
     # NOTE: never use `path` as a variable name in zsh — it's tied to $PATH.
-    local p project_dir claude_bin kube_src
+    local p project_dir claude_bin kube_src ssh_cfg_src
 
     # ── Configuration ──────────────────────────────────────────────
     if [[ -n ${1:-} && -d $1 ]]; then
@@ -41,10 +41,11 @@ claude-sandbox() {
 
     # Paths Claude gets read-only access to
     local -a ro_paths=(
-        /usr /lib /lib64 /etc /bin /sbin /opt
+        /usr /lib /lib64 /etc /bin /sbin /opt /nix/store
+        $HOME/.nix-profile/bin
         $HOME/.config/gh
         $HOME/.gitconfig
-        $HOME/.ssh/config
+        $HOME/.dotfiles/claude/.claude
         $HOME/.ssh/id_ed25519_only_git
         $HOME/.ssh/id_ed25519_only_git.pub
         $HOME/.ssh/known_hosts
@@ -96,6 +97,13 @@ claude-sandbox() {
         print -u2 "Warning: no ~/.kube/claude-sandbox-config found — falling back to the OIDC-based kubeconfig, which cannot authenticate headlessly in the sandbox."
     fi
 
+    # ── SSH config ────────────────────────────────────────────────
+    # The host file is owned by a uid that the user namespace does not map,
+    # so it shows up as "nobody" and ssh rejects it ("Bad owner or
+    # permissions"). Feed a copy in over fd 4 instead; bwrap creates it
+    # owned by the sandbox user.
+    [[ -r $HOME/.ssh/config ]] && ssh_cfg_src=$HOME/.ssh/config
+
     # ── Build bwrap arguments ─────────────────────────────────────
     local -a args
 
@@ -140,6 +148,14 @@ claude-sandbox() {
         [[ -e $p && $p == $HOME/* ]] && args+=(--bind $p $p)
     done
 
+    # SSH config copy (after the tmpfs home, or it would be wiped)
+    [[ -n $ssh_cfg_src ]] && args+=(--perms 0600 --ro-bind-data 4 $HOME/.ssh/config)
+
+    # ssh checks the owner of every Include'd file, so the "nobody"-owned
+    # /etc/ssh/ssh_config.d/*.conf are fatal too. They only hold systemd and
+    # libvirt proxy hosts, so hide them.
+    [[ -d /etc/ssh/ssh_config.d ]] && args+=(--tmpfs /etc/ssh/ssh_config.d)
+
     # Kubeconfig (after the tmpfs home, or it would be wiped)
     [[ -n $kube_src ]] && args+=(--ro-bind $kube_src $HOME/.kube/config)
 
@@ -158,7 +174,7 @@ claude-sandbox() {
     args+=(--setenv HOME    $HOME)
     args+=(--setenv USER    ${USER:-$(whoami)})
     args+=(--setenv LOGNAME ${USER:-$(whoami)})
-    args+=(--setenv PATH    /usr/local/bin:/usr/bin)
+    args+=(--setenv PATH    /usr/local/bin:/usr/bin:$HOME/.nix-profile/bin)
     args+=(--setenv TERM    ${TERM:-xterm-256color})
     args+=(--setenv LANG    ${LANG:-en_US.UTF-8})
     args+=(--setenv SHELL   /bin/bash)
@@ -182,9 +198,9 @@ claude-sandbox() {
     if (( $#secret_args )); then
         # --args 3 reads NUL-separated extra args from fd 3. It comes after
         # --clearenv (inside $args), so the secret --setenv isn't wiped.
-        bwrap $args --args 3 $claude_bin --dangerously-skip-permissions "$@" \
-            3< <(print -rN -- $secret_args)
+        bwrap $args --args 3 $claude_bin "$@" \
+            3< <(print -rN -- $secret_args) 4< ${ssh_cfg_src:-/dev/null}
     else
-        bwrap $args $claude_bin --dangerously-skip-permissions "$@"
+        bwrap $args $claude_bin "$@" 4< ${ssh_cfg_src:-/dev/null}
     fi
 }
