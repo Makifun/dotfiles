@@ -23,6 +23,7 @@ claude() {
 
     # NOTE: never use `path` as a variable name in zsh — it's tied to $PATH.
     local p project_dir claude_bin kube_src ssh_cfg_src
+    local gh_state=none kube_state=none
 
     # ── Configuration ──────────────────────────────────────────────
     if [[ -n ${1:-} && -d $1 ]]; then
@@ -82,7 +83,7 @@ claude() {
         local gh_token=$(<$gh_token_file)   # trailing newline stripped
         if [[ -n $gh_token ]]; then
             secret_args+=(--setenv GH_TOKEN $gh_token)
-            print -u2 "Passing GitHub token from \$HOME/.config/gh-sandbox-token into the sandbox."
+            gh_state="token from ~/.config/gh-sandbox-token"
         fi
     fi
 
@@ -90,10 +91,10 @@ claude() {
     # Mounted at the default location so kubectl finds it without KUBECONFIG.
     if [[ -f $HOME/.kube/claude-sandbox-config ]]; then
         kube_src=$HOME/.kube/claude-sandbox-config
-        print -u2 "Mounting sandbox kubeconfig ($kube_src) read-only into the sandbox."
+        kube_state="${kube_src/#$HOME/~} (ro)"
     elif [[ -f $HOME/.kube/config ]]; then
         kube_src=$HOME/.kube/config
-        print -u2 "Mounting kubeconfig ($kube_src) read-only into the sandbox."
+        kube_state="${kube_src/#$HOME/~} (ro, OIDC fallback)"
         print -u2 "Warning: no ~/.kube/claude-sandbox-config found — falling back to the OIDC-based kubeconfig, which cannot authenticate headlessly in the sandbox."
     fi
 
@@ -181,17 +182,35 @@ claude() {
     [[ -n ${COLORTERM:-} ]] && args+=(--setenv COLORTERM $COLORTERM)
 
     # ── Summary ────────────────────────────────────────────────────
-    print "╔══════════════════════════════════════════════════════╗"
-    print "║  Claude Code — External Bubblewrap Sandbox           ║"
-    print "╚══════════════════════════════════════════════════════╝"
-    print "   Project:  ${project_dir:t}                           "
-    print "╔══════════════════════════════════════════════════════╗"
-    print "║  Network:  OPEN (no restrictions)                    ║"
-    print "║  Env:      cleared (allowlist only)                  ║"
-    print "║  FS Write: project + ~/.claude                       ║"
-    print "║  /tmp:     private tmpfs (not shared with host)      ║"
-    print "║  FS Read:  system, gh, git, ssh (git key), kube      ║"
-    print "╚══════════════════════════════════════════════════════╝"
+    # Rows are label/value/colour triples; an empty label draws a divider.
+    local -a rows=(
+        Project "${project_dir/#$HOME/~}"          bold
+        ''      ''                                 ''
+        Network "open (no restrictions)"           yellow
+        Env     "cleared (allowlist only)"         ''
+        /tmp    "private tmpfs"                    ''
+        Write   "project, ~/.claude"               ''
+        Read    "system, gh, git, ssh (git key)"   ''
+        GitHub  $gh_state                          ''
+        Kube    $kube_state                        ''
+    )
+    local title=" Claude Code · bubblewrap sandbox " k v col
+    local -i width=56 vw=width-11   # inner width; value column width
+
+    # Colour only when stdout is a terminal.
+    local dim= rst= bold= yellow=
+    [[ -t 1 ]] && dim=$'\e[2m' rst=$'\e[0m' bold=$'\e[1m' yellow=$'\e[33m'
+
+    print -r -- "$dim╭─$rst$bold$title$rst$dim${(pl:width-1-${#title}::─:)}╮$rst"
+    for k v col in "${rows[@]}"; do
+        if [[ -z $k ]]; then
+            print -r -- "$dim├${(pl:width::─:)}┤$rst"
+            continue
+        fi
+        (( ${#v} > vw )) && v="…${v[-(vw-1),-1]}"
+        print -r -- "$dim│$rst ${(r:8:)k} ${(P)col}${(r:vw:)v}$rst $dim│$rst"
+    done
+    print -r -- "$dim╰${(pl:width::─:)}╯$rst"
     print
 
     # ── Launch ─────────────────────────────────────────────────────
