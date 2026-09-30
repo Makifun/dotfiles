@@ -5,7 +5,6 @@
 ## Nix-specific
 
 - Add new untracked files in Nix flakes with `git add`.
-- Use nix-locate to find packages by path. i.e. `nix-locate bin/ip`
 - Use `nix run` to execute applications that are not installed.
 
 ## Git
