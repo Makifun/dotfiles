@@ -43,6 +43,7 @@ claude() {
     # Paths Claude gets read-only access to
     local -a ro_paths=(
         /usr /lib /lib64 /etc /bin /sbin /opt /nix/store
+        /nix/var/nix/profiles /nix/var/nix/daemon-socket
         $HOME/.nix-profile/bin
         $HOME/.config/gh
         $HOME/.gitconfig
@@ -175,10 +176,13 @@ claude() {
     args+=(--setenv HOME    $HOME)
     args+=(--setenv USER    ${USER:-$(whoami)})
     args+=(--setenv LOGNAME ${USER:-$(whoami)})
-    args+=(--setenv PATH    /usr/local/bin:/usr/bin:$HOME/.nix-profile/bin)
+    args+=(--setenv PATH    /usr/local/bin:/usr/bin:$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin)
     args+=(--setenv TERM    ${TERM:-xterm-256color})
     args+=(--setenv LANG    ${LANG:-en_US.UTF-8})
     args+=(--setenv SHELL   /bin/bash)
+    # Nix sees itself as root in the user namespace and picks the read-only
+    # local store unless told to go through the daemon.
+    args+=(--setenv NIX_REMOTE daemon)
     [[ -n ${COLORTERM:-} ]] && args+=(--setenv COLORTERM $COLORTERM)
 
     # ── Summary ────────────────────────────────────────────────────
