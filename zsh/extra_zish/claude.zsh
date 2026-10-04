@@ -50,6 +50,8 @@ claude() {
         $HOME/.dotfiles/claude/.claude
         $HOME/.ssh/id_ed25519_only_git
         $HOME/.ssh/id_ed25519_only_git.pub
+        $HOME/.ssh/claude
+        $HOME/.ssh/claude.pub
         $HOME/.ssh/known_hosts
     )
 
