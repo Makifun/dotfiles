@@ -365,7 +365,7 @@ SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/ultrawide/
 
 [Containments][117]
-ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,208,0;Applet-103:2400,608,160,128,0;Applet-104:2400,736,160,128,0;Applet-105:2400,864,160,128,0;Applet-106:2400,992,160,128,0;Applet-107:2400,1120,160,128,0;Applet-108:2400,1248,160,192,0;
+ItemGeometries-2560x1440=
 ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=
@@ -445,7 +445,7 @@ plugin=org.kde.plasma.marginsseparator
 activityId=
 formfactor=0
 immutability=1
-lastScreen=-1
+lastScreen=0
 location=0
 plugin=org.kde.plasma.systemtray
 popupHeight=432
@@ -463,6 +463,10 @@ plugin=org.kde.plasma.gamemode
 [Containments][4][Applets][9][Applets][111]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
+
+[Containments][4][Applets][9][Applets][118]
+immutability=1
+plugin=org.kde.plasma.dwellclicker
 
 [Containments][4][Applets][9][Applets][12]
 immutability=1
@@ -520,8 +524,8 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][4][Applets][9][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.kscreen
-knownItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.kscreen
+extraItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.kscreen,org.kde.plasma.dwellclicker
+knownItems=org.kde.kdeconnect,org.kde.plasma.gamemode,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.keyboardindicator,org.kde.plasma.mediacontroller,org.kde.plasma.devicenotifier,org.kde.plasma.weather,org.kde.plasma.bluetooth,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.brightness,org.kde.plasma.clipboard,org.kde.kscreen,org.kde.plasma.dwellclicker
 
 [Containments][4][General]
 AppletOrder=5;6;7;8;9;23;24

@@ -53,9 +53,6 @@ wmclass=chatterino com.chatterino.chatterino
 wmclasscomplete=true
 wmclassmatch=1
 
-[6f5cd5fd-e9e4-4800-8d32-4a9113e4772d]
-titlematch=1
-
 [7a68c433-c426-4d3c-8612-8c3aee3e86cc]
 Description=vesktop
 position=2560,0
@@ -76,8 +73,7 @@ wmclass=brave-browser
 wmclassmatch=1
 
 [General]
-count=8
-rules=2db0c686-7d20-48bf-b77a-1704720e7ac6,3cd3af0a-9175-4cc8-b68d-5eb9a9f4fb58,39ec2736-4b72-4772-a735-e6263d7864aa,63ca8a63-7fcc-4ffc-8b87-06bc70c4062f,3dd71e1f-5cad-4b48-8e2d-b0972d7ed7cf,a94c6ec2-5890-4d6b-b3e0-24ff99382e3f,7a68c433-c426-4d3c-8612-8c3aee3e86cc,7a878c3b-8192-4514-9bf1-bc1cde0dd68c
+Order=steam,2db0c686-7d20-48bf-b77a-1704720e7ac6,3cd3af0a-9175-4cc8-b68d-5eb9a9f4fb58,39ec2736-4b72-4772-a735-e6263d7864aa,63ca8a63-7fcc-4ffc-8b87-06bc70c4062f,3dd71e1f-5cad-4b48-8e2d-b0972d7ed7cf,a94c6ec2-5890-4d6b-b3e0-24ff99382e3f,7a68c433-c426-4d3c-8612-8c3aee3e86cc,7a878c3b-8192-4514-9bf1-bc1cde0dd68c
 
 [a94c6ec2-5890-4d6b-b3e0-24ff99382e3f]
 Description=Window settings for Streamlink Twitch GUI
