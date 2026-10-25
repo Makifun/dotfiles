@@ -53,9 +53,9 @@ SlideInterval=43200
 SlidePaths=/home/makifun/Pictures/wallpappe/ultrawide/
 
 [Containments][117]
-ItemGeometries-2560x1440=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,224,0;Applet-103:2400,624,160,128,0;Applet-104:2400,752,160,128,0;Applet-105:2400,880,160,128,0;Applet-106:2400,1008,160,128,0;Applet-107:2400,1136,160,128,0;Applet-108:2400,1264,160,176,0;
+ItemGeometries-2560x1440=Applet-29:2400,0,160,96,0;Applet-100:2400,96,160,192,0;Applet-101:2400,288,160,128,0;Applet-102:2400,416,160,208,0;Applet-103:2400,624,160,128,0;Applet-104:2400,752,160,128,0;Applet-105:2400,880,160,128,0;Applet-106:2400,1008,160,128,0;Applet-107:2400,1136,160,128,0;Applet-108:2400,1264,160,176,0;
 ItemGeometries-3440x1440=
-ItemGeometriesHorizontal=Applet-29:2400,0,160,80,0;Applet-100:2400,80,160,192,0;Applet-101:2400,272,160,128,0;Applet-102:2400,400,160,224,0;Applet-103:2400,624,160,128,0;Applet-104:2400,752,160,128,0;Applet-105:2400,880,160,128,0;Applet-106:2400,1008,160,128,0;Applet-107:2400,1136,160,128,0;Applet-108:2400,1264,160,176,0;
+ItemGeometriesHorizontal=Applet-29:2400,0,160,96,0;Applet-100:2400,96,160,192,0;Applet-101:2400,288,160,128,0;Applet-102:2400,416,160,208,0;Applet-103:2400,624,160,128,0;Applet-104:2400,752,160,128,0;Applet-105:2400,880,160,128,0;Applet-106:2400,1008,160,128,0;Applet-107:2400,1136,160,128,0;Applet-108:2400,1264,160,176,0;
 activityId=
 formfactor=0
 immutability=1
@@ -362,14 +362,14 @@ popupWidth=810
 [Containments][117][Applets][29][Configuration][Appearance]
 autoFontAndSize=false
 boldText=true
-customDateFormat=dddd
+customDateFormat=dddd yyyy-MM-d
 dateDisplayFormat=BelowTime
 dateFormat=custom
 enabledCalendarPlugins=holidaysevents
-fontFamily=SF Mono
-fontSize=6
-fontStyleName=Semibold
-fontWeight=600
+fontFamily=DejaVu Sans Condensed
+fontSize=20
+fontStyleName=Bold
+fontWeight=700
 showWeekNumbers=true
 use24hFormat=2
 
