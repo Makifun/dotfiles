@@ -362,7 +362,7 @@ popupWidth=810
 [Containments][117][Applets][29][Configuration][Appearance]
 autoFontAndSize=false
 boldText=true
-customDateFormat=dddd yyyy-MM-d
+customDateFormat=dddd yyyy-MM-dd
 dateDisplayFormat=BelowTime
 dateFormat=custom
 enabledCalendarPlugins=holidaysevents
