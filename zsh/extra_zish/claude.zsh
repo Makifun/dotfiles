@@ -90,6 +90,18 @@ claude() {
         fi
     fi
 
+    local openrouter_api_file=$HOME/.config/openrouter_api_file
+    if [[ -f $openrouter_api_file && -r $openrouter_api_file ]]; then
+        local openrouter_token=$(<$openrouter_api_file)   # trailing newline stripped
+        if [[ -n $openrouter_token ]]; then
+            secret_args+=(--setenv ANTHROPIC_BASE_URL "https://openrouter.ai/api")
+            secret_args+=(--setenv ANTHROPIC_AUTH_TOKEN $openrouter_token)
+            secret_args+=(--setenv ANTHROPIC_API_KEY "")
+            secret_args+=(--setenv CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY "1")
+            openrouter_state="~/.config/openrouter_api_file"
+        fi
+    fi
+
     # ── Kubeconfig ────────────────────────────────────────────────
     # Mounted at the default location so kubectl finds it without KUBECONFIG.
     if [[ -f $HOME/.kube/claude-sandbox-config ]]; then
@@ -192,16 +204,17 @@ claude() {
     local -a rows=(
         Project "${project_dir/#$HOME/~}"          bold
         ''      ''                                 ''
-        Network "open (no restrictions)"           yellow
-        Env     "cleared (allowlist only)"         ''
-        /tmp    "private tmpfs"                    ''
-        Write   "project, ~/.claude"               ''
-        Read    "system, gh, git, ssh (git key)"   ''
-        GitHub  $gh_state                          ''
-        Kube    $kube_state                        ''
+        Network     "open (no restrictions)"           yellow
+        Env         "cleared (allowlist only)"         ''
+        /tmp        "private tmpfs"                    ''
+        Write       "project, ~/.claude"               ''
+        Read        "system, gh, git, ssh (git key)"   ''
+        GitHub      $gh_state                          ''
+        OpenRouter  $openrouter_state                  ''
+        Kube        $kube_state                        ''
     )
     local title=" Claude Code · bubblewrap sandbox " k v col
-    local -i width=56 vw=width-11   # inner width; value column width
+    local -i width=54 vw=width-11   # inner width; value column width
 
     # Colour only when stdout is a terminal.
     local dim= rst= bold= yellow=
@@ -214,7 +227,7 @@ claude() {
             continue
         fi
         (( ${#v} > vw )) && v="…${v[-(vw-1),-1]}"
-        print -r -- "$dim│$rst ${(r:8:)k} ${(P)col}${(r:vw:)v}$rst $dim│$rst"
+        print -r -- "$dim│$rst ${(r:10:)k} ${(P)col}${(r:vw:)v}$rst $dim│$rst"
     done
     print -r -- "$dim╰${(pl:width::─:)}╯$rst"
     print

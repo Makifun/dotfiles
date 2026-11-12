@@ -76,5 +76,6 @@
       "**Org-specific CLIs**: talosctl, omnictl, flux, sugma.sh, sops_refresh_key.sh, nh (nix helper)",
       "**Routine under <user>/ prefix**: none observed"
     ]
-  }
+  },
+  "model": "openrouter/auto"
 }
