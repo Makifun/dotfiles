@@ -17,6 +17,7 @@
       "WebFetch(domain:github.com)"
     ]
   },
+  "model": "openrouter/auto",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline/statusline.sh"
@@ -77,5 +78,9 @@
       "**Routine under <user>/ prefix**: none observed"
     ]
   },
-  "model": "openrouter/auto"
+  "modelSettings": {
+    "openrouter/auto": {
+      "effortLevel": "medium"
+    }
+  }
 }
